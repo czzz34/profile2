@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Socials</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow: hidden; /* This is to hide the default browser scrollbars */
+    }
+
+    #content {
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+      overflow: hidden; /* Ensure that video doesn't overflow */
+    }
+
+    #video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -3; /* Place it behind other content */
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensure the video covers the entire container */
+    }
+
+    
+
+    #profileContent {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      text-align: center;
+      color: #ffffff; /* Set text color */
+    }
+
+    h1 {
+      font-size: 2.6em;
+      margin-top: 0;
+    }
+
+    .social-icons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .column {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .icon {
+      height: 60px;
+      width: 60px;
+      margin: 10px;
+      padding: 10px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .icon:hover {
+      opacity: 0.9;
+      transform: scale(1.1);
+      border-radius: 5px;
+    }
+
+    /* Media query for smaller devices */
+    @media (max-width: 768px) {
+      #video-background {
+        width: auto;
+        height: auto;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div id="sidebar"></div>
+
+  <div id="content">
+    <video autoplay muted loop id="video-background">
+      <source src="yes5.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div id="overlay"></div>
+    <div id="profileContent">
+      <h1>SOCIALS</h1>
+      <div class="social-icons">
+        <div class="row">
+          <div class="column">
+            <a href="https://wa.me/7303535581?text=Hello" target="_self">
+              <img src="whats.png" class="icon" alt="Whatsapp">
+            </a>
+          </div>
+          <div class="column">
+            <a href="https://www.instagram.com/chaitanya_ajmani4329/" target="_self">
+              <img src="insta.png" class="icon" alt="Instagram">
+            </a>
+          </div>
+          <div class="column">
+            <a href="https://www.facebook.com/profile.php?id=100093976996042" target="_self">
+              <img src="face.png" class="icon" alt="Facebook">
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <a href="https://www.snapchat.com/add/chaitanyaajmani" target="_self">
+              <img src="snap2.png" class="icon" alt="Snapchat">
+            </a>
+          </div>
+          <div class="column">
+          </div>
+          <div class="column">
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <a href="" target="_self">
+              <!-- Icon removed -->
+            </a>
+          </div>
+          <div class="column">
+          </div>
+          <div class="column">
+            <!-- Icon removed -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

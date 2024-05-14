@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Games</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    #content {
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -3; /* Place it behind other content */
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensure the video covers the entire container */
+    
+    }
+
+    
+    #profileContent {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    h1 {
+      font-size: 2.6em;
+      margin-top: 0;
+    }
+
+    .social-icons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .column {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .icon {
+      height: 60px;
+      width: 60px;
+      margin: 10px;
+      padding: 10px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .icon:hover {
+      opacity: 0.9;
+      transform: scale(1.1);
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="sidebar"></div>
+
+  <div id="content">
+    <video autoplay muted loop id="video-background">
+      <source src="yes5.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div id="profileContent">
+      <h1>GAMES</h1>
+      <div class="social-icons">
+        <div class="row">
+          <!-- Icon 1 (PUBG icon) with onclick attribute -->
+          <div class="column">
+            <a href="" target="_self">
+              <img src="pubg.png" class="icon" alt="pubg" onclick="copyToClipboard('55640514931')">
+            </a>
+          </div>
+          <!-- Icon 2 (Call of Duty icon) with onclick attribute -->
+          <div class="column">
+            <a href="" target="_self">
+             
+          </div>
+          <!-- Icon 3 (Free Fire icon) with onclick attribute -->
+          <div class="column">
+            <a href="" target="_self">
+              <img src="freefire.jpg" class="icon" alt="freefire" onclick="copyToClipboard('user does not play this game')">
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Icon 4 (CS:GO icon) with onclick attribute -->
+          <div class="column">
+            <a href="" target="_self">
+            
+            </a>
+          </div>
+          <!-- Icon 5 (Genshin icon) with onclick attribute -->
+          <div class="column">
+            <a href="" target="_self">
+              <img src="genshin2.jpeg" class="icon" alt="genshin" onclick="copyToClipboard('820244227')">
+            </a>
+          </div>
+          <!-- Icon 6 (Valorant icon) with onclick attribute -->
+          <div class="column">
+            
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Icon 7 (Ludo icon) with onclick attribute -->
+          <div class="column">
+            <a href="" target="_self">
+              
+            </a>
+          </div>
+          <!-- Icon 8 (Replace with your desired icon) with onclick attribute -->
+          <div class="column">
+            <a href="" target="_self">
+              <!-- Replace the image src and text for this icon -->
+              <img src="chess.png" class="icon" alt="chess" onclick="copyToClipboard('Czzz45')">
+            </a>
+          </div>
+          <!-- Icon 9 (Replace with your desired icon) with onclick attribute -->
+          <div class="column">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const icons = document.querySelectorAll(".icon");
+
+      function handleIconMouseOver(e) {
+        this.style.transform = "scale(1.2)";
+        icons.forEach(icon => {
+          if (icon !== this) {
+            icon.style.opacity = "1";
+          }
+        });
+      }
+
+      function handleIconMouseOut(e) {
+        this.style.transform = "scale(1)";
+        icons.forEach(icon => {
+          icon.style.opacity = "1";
+        });
+      }
+
+      icons.forEach(icon => {
+        icon.addEventListener("mouseover", handleIconMouseOver);
+        icon.addEventListener("mouseout", handleIconMouseOut);
+      });
+    });
+
+    function copyToClipboard(text) {
+      const el = document.createElement("textarea");
+      el.value = text;
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand("copy");
+      document.body.removeChild(el);
+      alert(`"${text}" is copied to clipboard!`);
+    }
+  </script>
+</body>
+
+</html>

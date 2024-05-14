@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow: hidden; /* This is to hide the default browser scrollbars */
+    }
+
+    #content {
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+      overflow: hidden; /* Ensure that video doesn't overflow */
+    }
+
+    #video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -3; /* Place it behind other content */
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensure the video covers the entire container */
+    }
+
+    #profileContent {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      text-align: center;
+    }
+
+    
+
+    .social-icons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      margin: 30px 20px;
+      padding: 15px 40px;
+      border: 3px solid #2c241f;
+      border-radius: 5px;
+      transition: all 0.6s ease-in-out;
+      text-decoration: none;
+      font-size: 1.2em;
+      color: #be5310;
+    }
+
+    .button:hover {
+      opacity: 3;
+      transform: scale(1.2);
+      
+    }
+
+    /* Add red color on hover for the "Others" button */
+    #othersBtn:hover {
+      
+    }
+
+    /* Media query for smaller devices */
+    @media (max-width: 1px) {
+      #video-background {
+        width: auto;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="sidebar"></div>
+  <div id="content">
+    <div id="overlay"></div>
+    <div id="profileContent">
+      <div class="row">
+        <div class="column">
+          <a class="button" href="p.html" id="socialsBtn">Socials</a>
+          <a class="button" href="p3.html" id="othersBtn">Others</a>
+          <a class="button" href="p2.html" id="gamesBtn">Games</a>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <video autoplay muted loop id="video-background">
+    <source src="yes5.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</body>
+</html>
